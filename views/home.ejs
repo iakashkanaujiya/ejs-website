@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ansham Company | Essential Oils and Attars</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="image/png" rel="icon" href="images/webiste-logo/sitelogo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+  <!-- Website Header -->
+  <%- include("header"); %>
+    <!-- Main Container max-width: 1280px -->
+    <div role="main" class="main-container">
+      <!-- Welcome Section -->
+      <div id="welcome" class="container-fluid">
+        <div class="welcome-text-container">
+          <img src="images/background/frame.png" alt="frame">
+        </div>
+      </div>
+      <!-- Presentation -->
+      <div id="presentation" class="container-fluid">
+        <div class="iphone-img-box"><img src="images/background/iphone.png" alt="iphone-image"></div>
+        <div class="column">
+          <div class="text-wrap">
+            <h2>Ultimate Inspired Perfume For You</h2>
+            <p>A startup or start-up is started by individual
+              founders or entrepreneurs to search for a repeatable
+              and scalable business model.</p>
+          </div>
+          <div class="progress-bar">
+            <div class="title-text">Essential oil</div>
+            <div class="progress-text progress-text1"><span>95%</span></div>
+            <div class="progress-bar-inner">
+              <div class="progress-bar-outer progress-bar-outer1"></div>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="title-text">Absolute oil</div>
+            <div class="progress-text progress-text2">90%</div>
+            <div class="progress-bar-inner">
+              <div class="progress-bar-outer progress-bar-outer2"></div>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="title-text">Floral water</div>
+            <div class="progress-text progress-text3">85%</div>
+            <div class="progress-bar-inner">
+              <div class="progress-bar-outer progress-bar-outer3"></div>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="title-text">Attar</div>
+            <div class="progress-text progress-text4">80%</div>
+            <div class="progress-bar-inner">
+              <div class="progress-bar-outer progress-bar-outer4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product Section -->
+      <div id="products" class="container-fluid">
+        <div class="prodcut-container">
+          <div class="product essential-oil">
+            <div class="img-box">
+              <img src="images/Products/essential-oil.png" alt="essential-oil">
+            </div>
+            <div class="content-box">
+              <h2 class="title">Essential Oils</h2>
+            </div>
+            <a href="/essential-oil">
+              <div class="button"><i class="fas fa-arrow-right"></i></div>
+            </a>
+          </div>
+          <div class="product absolute-oil">
+            <div class="img-box">
+              <img src="images/Products/absolute-oil.png" alt="absolute-oil">
+            </div>
+            <div class="content-box">
+              <h2 class="title">Absolute Oils</h2>
+            </div>
+            <a href="/absolute-oil">
+              <div class="button"><i class="fas fa-arrow-right"></i></div>
+            </a>
+          </div>
+          <div class="product floral-water">
+            <div class="img-box">
+              <img src="images/Products/floral-water.png" alt="floral-water">
+            </div>
+            <div class="content-box">
+              <h2 class="title">Floral Water</h2>
+            </div>
+            <a href="/floral-water">
+              <div class="button"><i class="fas fa-arrow-right"></i></div>
+            </a>
+          </div>
+          <div class="product attar">
+            <div class="img-box">
+              <img src="images/Products/attar.png" alt="attar">
+            </div>
+            <div class="content-box">
+              <h2 class="title">Attars</h2>
+            </div>
+            <a href="/attar">
+              <div class="button"><i class="fas fa-arrow-right"></i></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Homepage Contact Form -->
+      <div id="homepage-contact" class="container-fluid">
+        <div class="contact-box-wrap">
+          <div class="contact-box">
+            <form name="myForm" autocomplete="off" onsubmit="formSumit('home'); return false">
+              <div class="contact-field fullname">
+                <div class="fname-box">
+                  <label for="text">First name</label>
+                  <input type="text" name="fname" required>
+                </div>
+                <div class="lname-box">
+                  <label for="text">Last name</label>
+                  <input type="text" name="lname" required>
+                </div>
+              </div>
+              <div class="contact-field email">
+                <label for="text">Email</label>
+                <input type="email" name="email" required>
+              </div>
+              <div class="contact-field message">
+                <label for="text">Message</label>
+                <textarea name="message" cols="30" rows="10"></textarea>
+              </div>
+              <div class="contact-field submit">
+                <button type="submit">Submit</button>
+                <div id="home-contact-spinner" class="loader"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main Container Ends  -->
+    <!--  Footer -->
+    <%- include("footer"); %>
+      <!-- Javascript -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="javascript/index.js"></script>
+      <script>
+        // Animate the image when window loads
+        $(window).on("load", function () {
+          $("#welcome .welcome-text-container img").addClass("popup");
+        });
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansham Company - 404 not found</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: #fce7c6;">
+    <div id="err-page" class="main-container" style="height: 100vh;">
+        <div class="home-page-button"><a href="/"><button>Home</button></a></div>
+        <div class="content-box">
+            <div class="err-img">
+                <img src="images/background/404.png" alt="">
+            </div>
+            <div class="err-text">
+                <h1>404</h1>
+                <p><strong>404.</strong> That's an error.</p>
+                <p>The requested URL <strong>
+                        <%= requestedUrl %>
+                    </strong> was not found on this webiste.
+                    Click the Home button to visit the home page.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

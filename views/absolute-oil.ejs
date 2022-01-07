@@ -1,0 +1,71 @@
+<!-- ---- Add product name here to create a new product ------ -->
+<% const productType="absolute-oil" ; const products=[ "amber" , "ambrette" , "angelica" , "blue lotus" , "chameli"
+    , "champa" , "frangipani" , "kewra" , "motia" , "pink lotus" , "rose" , "turmeric" , "white lotus" , "white musk"
+    , "white tea" ]; %>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Absolute Oils</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+
+    <body>
+        <!--  Website Header -->
+        <%- include("header"); %>
+            <!-- Products Catalogue -->
+            <main id="product-catalogue">
+                <div class="main-container">
+                    <div class="container-fluid">
+                        <div class="content-box">
+                            <h1>Absolute Oils Manufacturer & Exporter In India</h1>
+                            <p>Though many people are knowledgeable about important oils, far fewer are aware of this
+                                presence of oils. Absolute oils are concentrated aromatic oils. Some flowers are too
+                                delicate for steam distillation, which hurts them a lot, and thus
+                                their oils are more economically extracted using a process called enfleurage. Oils are
+                                more concentrated than oils, and more of the fragrance is maintained,
+                                since they’re created in a low temperature process. Which implies that the odor of
+                                a complete oil is frequently more comparable to the odor of the original plant. Absolute
+                                oils are more volatile than important oils, meaning they could evaporate or degrade if
+                                not looked after properly.
+                            </p>
+                        </div>
+                        <div class="prodcut-container">
+                            <% products.forEach(function(product){ %>
+                                <div class="product">
+                                    <div class="img-box">
+                                        <img src="images/<%= productType %>/<%= product %>.jpg" alt="<%= product %>">
+                                    </div>
+                                    <div class="content-box">
+                                        <%var length=product.length; var firstLetter=product.charAt(0).toUpperCase();
+                                            var newProduct=firstLetter + product.slice(1,length);%>
+                                            <h2 class="title">
+                                                <%= newProduct %>
+                                            </h2>
+                                    </div>
+                                    <div class="button">
+                                        <button
+                                            onclick="modalBox('<%= productType %>','<%= product %>')">Readmore</button>
+                                    </div>
+                                </div>
+                                <%});%>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- modal popup box -->
+            <%- include("modal-box"); %>
+                <!-- Footer -->
+                <%- include("footer"); %>
+                    <!-- Javascript -->
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                    <script src="javascript/index.js"></script>
+    </body>
+
+    </html>

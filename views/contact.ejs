@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <!-- Website Header -->
+    <%- include("header"); %>
+        <!-- Content -->
+        <main id="contact">
+            <div class="main-container">
+                <div class="conact-box-wrap">
+                    <div class="page-title">
+                        <h1>Please get in touch and we'll contact you back soon!</h1>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-column-1">
+                            <form name="myForm" autocomplete="off" onsubmit="formSumit('contact'); return false">
+                                <div class="inputfield fullname-box">
+                                    <label for="fullname">Full name <span style="color: red;">*</span></label>
+                                    <input type="text" name="fullname" required>
+                                </div>
+                                <div class="inputfield email-box">
+                                    <label for="email">Email <span style="color: red;">*</span></label>
+                                    <input type="email" name="email" required>
+                                </div>
+                                <div class="inputfield message-box">
+                                    <label for="message">Your message <span style="color: red;">*</span></label>
+                                    <textarea name="message" aria-required="true" aria-invalid="false"
+                                        spellcheck="flase" cols="50" rows="10"></textarea>
+                                </div>
+                                <div class="submit-button">
+                                    <button type="submit">Submit</button>
+                                    <div id="contact-page-spinner" class="loader"
+                                        style="width: 30px; height: 30px; border: 5px solid #D9C6C5; border-top: 5px solid #000; ">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="panel-column-2">
+                            <div class="content-box">
+                                <div class="title">
+                                    <h2>Find us here!</h2>
+                                    <p>Lala Mishra, Kannauj Uttar Pradesh India 209725 </p>
+                                </div>
+                                <div class="owner-address">
+                                    <div class="map-img">
+                                        <img src="images/background/worldmap.png" alt="ansham company">
+                                    </div>
+                                    <a class="find-us-map-btn" href="https://goo.gl/maps/2wLErv6MAnBHfGHJA"
+                                        target="_blank">Find us on map</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <%- include("footer"); %>
+            <!-- javascript -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="javascript/index.js"></script>
+</body>
+
+</html>

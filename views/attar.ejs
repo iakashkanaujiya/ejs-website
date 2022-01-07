@@ -1,0 +1,73 @@
+<!-- ---- Add product name here to create a new product ------ -->
+<% const productType="attar" ; const products=[ "agarwood" , "chameli" , "champa" , "jasmine sambak" , "kewra" , "khus"
+    , "majmuan" , "maulshree" , "mehandi" , "mitti" , "motia" , "rose" , "saffron" , "shamama" , "zafran" ]; %>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Attar</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+
+    <body>
+        <!-- Website Header -->
+        <%- include("header"); %>
+            <!-- Product catalogue -->
+            <main id="product-catalogue">
+                <div class="main-container">
+                    <div class="container-fluid">
+                        <div class="content-box">
+                            <h1>Attar Manufacturer & Exporter In India</h1>
+                            <p>Attar oils are extracted natural oils through pure steam distillation process to derive a
+                                characteristic of odour of the plant. Attar oils have been around us from thousands of
+                                years and they can be used for a wide range of spiritual,
+                                health, cosmetic, religious and also for other applications. They can be used as a
+                                single Attar oil or a blend of Attar oils depending upon a user experience
+                                and desired benefit. Each of these oils are so unique and pleasant in their own
+                                way that they trigger an emotion and make you feel so fulfilling. Come experience the
+                                joy of fulfilling with our nature’s pure essence from our powerful range of Attar oils.
+                                Ansham Company is the best attar oil manufacturer and exporter in India offers a
+                                wide variety of Indian attar oil, rose attar oil and natural attar oil which are in
+                                conformation with the international standards of quality. We have 100% consumer
+                                satisfaction.
+                            </p>
+                        </div>
+                        <div class="prodcut-container">
+                            <% products.forEach(function(product){ %>
+                                <div class="product">
+                                    <div class="img-box">
+                                        <img src="images/<%= productType %>/<%= product %>.jpg" alt="<%= product %>">
+                                    </div>
+                                    <div class="content-box">
+                                        <%var length=product.length; var firstLetter=product.charAt(0).toUpperCase();
+                                            var newProduct=firstLetter + product.slice(1,length);%>
+                                            <h2 class="title">
+                                                <%= newProduct %>
+                                            </h2>
+                                    </div>
+                                    <div class="button">
+                                        <button
+                                            onclick="modalBox('<%= productType %>','<%= product %>')">Readmore</button>
+                                    </div>
+                                </div>
+                                <%});%>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- modal popup box -->
+            <%- include("modal-box"); %>
+                <!-- Footer -->
+                <%- include("footer"); %>
+                    <!-- Javascript -->
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                    <script src="javascript/index.js"></script>
+    </body>
+
+    </html>
